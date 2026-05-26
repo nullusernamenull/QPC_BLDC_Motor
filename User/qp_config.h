@@ -1,0 +1,25 @@
+#ifndef QP_CONFIG_H_
+#define QP_CONFIG_H_
+
+#define Q_SPY
+#define QP_API_VERSION 0
+
+#define Q_SIGNAL_SIZE 2U
+#define QF_MAX_ACTIVE 8U
+#define QF_MAX_EPOOL 0U
+#define QF_MAX_TICK_RATE 1U
+#define QF_EVENT_SIZ_SIZE 2U
+#define QF_TIMEEVT_CTR_SIZE 4U
+#define QF_EQUEUE_CTR_SIZE 1U
+#define QF_MPOOL_CTR_SIZE 2U
+#define QF_MPOOL_SIZ_SIZE 2U
+
+#define QS_TIME_SIZE 4U
+#define QS_OBJ_PTR_SIZE 4U
+#define QS_FUN_PTR_SIZE 4U
+#define QS_CTR_SIZE 2U
+
+#define QF_BASEPRI 0x20U
+
+#endif
+
