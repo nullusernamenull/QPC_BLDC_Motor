@@ -10,8 +10,8 @@
       <TargetName>Target 1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
-      <uAC6>0</uAC6>
+      <pCCUsed>6160000::V6.16::ARMCLANG</pCCUsed>
+      <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103C8</Device>
@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -322,7 +322,7 @@
             <PlainCh>0</PlainCh>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
-            <wLevel>2</wLevel>
+            <wLevel>3</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>0</uC99>
@@ -337,9 +337,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_STDPERIPH_DRIVER,STM32F10X_HD</Define>
+              <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD,QP_CONFIG</Define>
               <Undefine></Undefine>
-              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\APP\led;.\Public;.\APP\beep;.\APP\smg;.\APP\key;.\APP\exti;.\APP\time;.\APP\pwm</IncludePath>
+              <IncludePath>.\User;.\3rd_party\qpc_7_3_4\include;.\3rd_party\qpc_7_3_4\ports\arm-cm\qv\armclang;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\APP\led;.\Public;.\APP\beep;.\APP\smg;.\APP\key;.\APP\exti;.\APP\time;.\APP\pwm</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -393,15 +393,120 @@
               <FileType>1</FileType>
               <FilePath>.\User\stm32f10x_it.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\bsp.c</FilePath>
+            </File>
+            <File>
+              <FileName>blinky.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\blinky.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>QPC</GroupName>
+          <Files>
+            <File>
+              <FileName>qv_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\ports\arm-cm\qv\armclang\qv_port.c</FilePath>
+            </File>
+            <File>
+              <FileName>qv.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qv\qv.c</FilePath>
+            </File>
+            <File>
+              <FileName>qep_hsm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qf\qep_hsm.c</FilePath>
+            </File>
+            <File>
+              <FileName>qep_msm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qf\qep_msm.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_act.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qf\qf_act.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_actq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qf\qf_actq.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_defer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qf\qf_defer.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_dyn.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qf\qf_dyn.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_mem.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qf\qf_mem.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_ps.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qf\qf_ps.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_qact.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qf\qf_qact.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_qeq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qf\qf_qeq.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_qmact.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qf\qf_qmact.c</FilePath>
+            </File>
+            <File>
+              <FileName>qf_time.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qf\qf_time.c</FilePath>
+            </File>
+            <File>
+              <FileName>qs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qs\qs.c</FilePath>
+            </File>
+            <File>
+              <FileName>qs_64bit.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qs\qs_64bit.c</FilePath>
+            </File>
+            <File>
+              <FileName>qs_fp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qs\qs_fp.c</FilePath>
+            </File>
+            <File>
+              <FileName>qstamp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\3rd_party\qpc_7_3_4\src\qs\qstamp.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Startup</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32f10x_hd.s</FileName>
+              <FileName>startup_stm32f10x_md.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\Libraries\CMSIS\startup_stm32f10x_hd.s</FilePath>
+              <FilePath>.\Libraries\CMSIS\startup_stm32f10x_md.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -447,11 +552,6 @@
               <FileName>system_stm32f10x.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Libraries\CMSIS\system_stm32f10x.c</FilePath>
-            </File>
-            <File>
-              <FileName>core_cm3.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\CMSIS\core_cm3.c</FilePath>
             </File>
           </Files>
         </Group>

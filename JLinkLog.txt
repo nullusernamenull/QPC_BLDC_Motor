@@ -1,0 +1,99 @@
+T2A04 000:186.849   SEGGER J-Link V7.22b Log File
+T2A04 000:186.933   DLL Compiled: Jun 17 2021 17:22:49
+T2A04 000:186.939   Logging started @ 2026-06-02 02:30
+T2A04 000:186.945 - 186.948ms
+T2A04 000:186.954 JLINK_SetWarnOutHandler(...)
+T2A04 000:186.961 - 0.009ms
+T2A04 000:186.967 JLINK_OpenEx(...)
+T2A04 000:188.636   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T2A04 000:189.225   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T2A04 000:189.466   Decompressing FW timestamp took 183 us
+T2A04 000:199.568   Hardware: V9.40
+T2A04 000:199.623   S/N: 69401599
+T2A04 000:199.635   OEM: SEGGER
+T2A04 000:199.644   Feature(s): RDI, GDB, FlashDL, FlashBP, JFlash
+T2A04 000:201.555   TELNET listener socket opened on port 19021
+T2A04 000:201.636   WEBSRV Starting webserver
+T2A04 000:201.706   WEBSRV Webserver running on local port 19080
+T2A04 000:201.715 - 14.751ms returns "O.K."
+T2A04 000:201.728 JLINK_GetEmuCaps()
+T2A04 000:201.734 - 0.008ms returns 0xB9FF7BBF
+T2A04 000:201.742 JLINK_TIF_GetAvailable(...)
+T2A04 000:202.140 - 0.401ms
+T2A04 000:202.149 JLINK_SetErrorOutHandler(...)
+T2A04 000:202.154 - 0.008ms
+T2A04 000:202.168 JLINK_ExecCommand("ProjectFile = "E:\Coding\QPC_BLDC_Motor\JLinkSettings.ini"", ...). 
+T2A04 000:208.995   Ref file found at: C:\Keil_v5\ARM\Segger\JLinkDevices.ref
+T2A04 000:209.093   REF file references invalid XML file: C:\Program Files\SEGGER\JLink_V944\JLinkDevices.xml
+T2A04 000:209.156 - 6.992ms returns 0x00
+T2A04 000:209.176 JLINK_ExecCommand("Device = STM32F103C8", ...). 
+T2A04 000:209.296   Device "STM32F103C8" selected.
+T2A04 000:210.909 - 1.734ms returns 0x00
+T2A04 000:210.928 JLINK_GetHardwareVersion()
+T2A04 000:210.934 - 0.008ms returns 94000
+T2A04 000:210.940 JLINK_GetDLLVersion()
+T2A04 000:210.946 - 0.008ms returns 72202
+T2A04 000:210.952 JLINK_GetOEMString(...)
+T2A04 000:210.959 JLINK_GetFirmwareString(...)
+T2A04 000:210.966 - 0.010ms
+T2A04 000:210.975 JLINK_GetDLLVersion()
+T2A04 000:210.980 - 0.008ms returns 72202
+T2A04 000:210.986 JLINK_GetCompileDateTime()
+T2A04 000:210.992 - 0.008ms
+T2A04 000:210.999 JLINK_GetFirmwareString(...)
+T2A04 000:211.005 - 0.008ms
+T2A04 000:211.011 JLINK_GetHardwareVersion()
+T2A04 000:211.017 - 0.008ms returns 94000
+T2A04 000:211.023 JLINK_GetSN()
+T2A04 000:211.029 - 0.008ms returns 69401599
+T2A04 000:211.036 JLINK_GetOEMString(...)
+T2A04 000:211.044 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T2A04 000:212.371 - 1.332ms returns 0x00
+T2A04 000:212.382 JLINK_HasError()
+T2A04 000:212.394 JLINK_SetSpeed(1000)
+T2A04 000:212.642 - 0.251ms
+T2A04 000:212.875 JLINK_HasError()
+T2A04 000:212.885 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T2A04 000:212.891 - 0.008ms returns JLINKARM_RESET_TYPE_NORMAL
+T2A04 000:212.897 JLINK_Reset()
+T2A04 000:213.315   InitTarget() start
+T2A04 000:213.325    J-Link Script File: Executing InitTarget()
+T2A04 000:303.562   Can not attach to CPU. Trying connect under reset.
+T2A04 000:446.098   Connecting to CPU via connect under reset failed.
+T2A04 000:497.034   InitTarget() end
+T2A04 000:559.885   InitTarget() start
+T2A04 000:559.955    J-Link Script File: Executing InitTarget()
+T2A04 000:650.644   Can not attach to CPU. Trying connect under reset.
+T2A04 000:792.769   Connecting to CPU via connect under reset failed.
+T2A04 000:843.438   InitTarget() end
+T2A04 000:843.572 - 630.694ms
+T2A04 000:843.638 JLINK_GetId()
+T2A04 000:844.410   InitTarget() start
+T2A04 000:844.499    J-Link Script File: Executing InitTarget()
+T2A04 000:935.187   Can not attach to CPU. Trying connect under reset.
+T2A04 001:076.197   Connecting to CPU via connect under reset failed.
+T2A04 001:127.409   InitTarget() end
+T2A04 001:190.008   InitTarget() start
+T2A04 001:190.067    J-Link Script File: Executing InitTarget()
+T2A04 001:280.336   Can not attach to CPU. Trying connect under reset.
+T2A04 001:421.764   Connecting to CPU via connect under reset failed.
+T2A04 001:473.182   InitTarget() end
+T2A04 001:473.317 - 629.699ms returns 0x00000000
+T2A04 001:473.386 JLINK_GetId()
+T2A04 001:473.975   InitTarget() start
+T2A04 001:474.273    J-Link Script File: Executing InitTarget()
+T2A04 001:564.970   Can not attach to CPU. Trying connect under reset.
+T2A04 001:706.103   Connecting to CPU via connect under reset failed.
+T2A04 001:756.694   InitTarget() end
+T2A04 001:819.414   InitTarget() start
+T2A04 001:819.474    J-Link Script File: Executing InitTarget()
+T2A04 001:910.147   Can not attach to CPU. Trying connect under reset.
+T2A04 002:051.706   Connecting to CPU via connect under reset failed.
+T2A04 002:102.724   InitTarget() end
+T2A04 002:102.891 - 629.527ms returns 0x00000000
+T2A04 002:118.130 JLINK_GetFirmwareString(...)
+T2A04 002:118.169 - 0.045ms
+T2A04 010:468.973 JLINK_Close()
+T2A04 010:487.157 - 18.227ms
+T2A04 010:487.210   
+T2A04 010:487.225   Closed

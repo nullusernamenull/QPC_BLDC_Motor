@@ -19,7 +19,4 @@
 #define QS_FUN_PTR_SIZE 4U
 #define QS_CTR_SIZE 2U
 
-#define QF_BASEPRI 0x20U
-
 #endif
-

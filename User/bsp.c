@@ -2,7 +2,7 @@
 #include "led.h"
 #include "usart.h"
 
-#include "../3rd_party/qpc_7_3_4/include/qpc.h"
+#include "qpc.h"
 
 static volatile uint32_t l_ticks;
 
@@ -50,6 +50,23 @@ void QF_onStartup(void) {
 void QF_onCleanup(void) {
 }
 
+void QV_onIdle(void) {
+#ifdef Q_SPY
+    QF_INT_ENABLE();
+    QS_onFlush();
+#else
+    QV_CPU_SLEEP();
+#endif
+}
+
+Q_NORETURN Q_onError(char const * const module, int_t const id) {
+    (void)module;
+    (void)id;
+    __disable_irq();
+    for (;;) {
+    }
+}
+
 uint8_t QS_onStartup(void const *arg) {
     (void)arg;
     static uint8_t qsBuf[1024];
@@ -64,6 +81,9 @@ void QS_onFlush(void) {
     }
 }
 
+void QS_onCleanup(void) {
+}
+
 QSTimeCtr QS_onGetTime(void) {
     return BSP_getTicks();
 }
@@ -72,9 +92,20 @@ void QS_onReset(void) {
     NVIC_SystemReset();
 }
 
+void QS_onCommand(
+    uint8_t cmdId,
+    uint32_t param1,
+    uint32_t param2,
+    uint32_t param3)
+{
+    (void)cmdId;
+    (void)param1;
+    (void)param2;
+    (void)param3;
+}
+
 void QS_onTestSetup(void) {
 }
 
 void QS_onTestTeardown(void) {
 }
-
